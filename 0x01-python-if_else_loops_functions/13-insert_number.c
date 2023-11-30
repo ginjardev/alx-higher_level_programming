@@ -3,7 +3,7 @@
 /**
  * insert_node - Insert a number into a sorted singly linked list.
  * @head: Head of the list.
- * number: Value of the number to insert
+ * @number: Value of the number to insert
  *
  * Return: The address of the new node, or NULL if it failed.
  */
