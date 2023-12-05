@@ -6,3 +6,6 @@ def multiple_returns(sentence):
     else:
         return (len(sentence), sentence[0])
 
+
+if __name__ == "__main__":
+    multiple_returns(sentence)
