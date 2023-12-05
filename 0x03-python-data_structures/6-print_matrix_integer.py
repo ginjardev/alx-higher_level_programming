@@ -5,11 +5,7 @@ def print_matrix_integer(matrix=[[]]):
         return
     else:
         for row in matrix:
-            i = 0
-            for col in row:
-                print('{:d}'.format(col), end=" " if i != 2 else "")
-                i = i + 1
-            print()
+            print(" ".join("{:d}".format(col) for col in row))
 
 
 if __name__ == "__main__":
