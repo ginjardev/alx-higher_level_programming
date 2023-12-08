@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def search_replace(my_list, search, replace):
     new_list = []
     for item in my_list:
@@ -11,4 +12,4 @@ def search_replace(my_list, search, replace):
 
 
 if __name__ == "__main__":
-    search_replace()
+    search_replace(my_list, search, replace)
