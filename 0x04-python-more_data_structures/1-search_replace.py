@@ -10,5 +10,5 @@ def search_replace(my_list, search, replace):
     return new_list
 
 
-# if __name__ == "__main__":
-#     search_replace()
+if __name__ == "__main__":
+    search_replace()
