@@ -5,6 +5,8 @@ def uniq_add(my_list=[]):
     sum = 0
     for i in set(my_list):
         sum = sum + i
+    return sum
+
 
 if __name__ == "__main__":
     uniq_add(my_list=[])
