@@ -1,30 +1,33 @@
 #!/usr/bin/python3
 
+
 def roman_to_int(roman_string):
-    if isinstance(roman_string, str) or roman_string is None:
+    if not isinstance(roman_string, str) or roman_string is None:
         return 0
 
-    roman_numerals = {
-        'I': 1,
-        'V': 5,
-        'X': 10,
-        'L': 50,
-        'C': 100,
-        'D': 500,
-        'M': 1000
+    roman_numbers = {
+        "I": 1,
+        "IV": 4,
+        "V": 5,
+        "IX": 9,
+        "X": 10,
+        "XL": 40,
+        "L": 50,
+        "XC": 90,
+        "C": 100,
+        "CD": 400,
+        "D": 500,
+        "CM": 900,
+        "M": 1000,
     }
 
-    prev_value = 0
-    result = 0
+    i = res = 0
 
-    for numeral in reversed(roman_string):
-        value = roman_numerals[numeral]
-
-        if value < prev_value:
-            result -= value
-        else:
-            result += value
-
-        prev_value = value
-
-    return result
+    while i < len(roman_string):
+        if roman_string[i : i + 2] in roman_numbers:
+            res += roman_numbers.get(roman_string[i : i + 2])
+            i += 2
+        elif roman_string[i] in roman_numbers:
+            res += roman_numbers.get(roman_string[i])
+            i += 1
+    return res
