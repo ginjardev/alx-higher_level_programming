@@ -2,7 +2,7 @@
 
 
 def simple_delete(a_dictionary, key=""):
-    del a_dictionary[key]
+    a_dictionary.pop(key, "default")
     return a_dictionary
 
 
