@@ -24,8 +24,8 @@ def roman_to_int(roman_string):
     i = res = 0
 
     while i < len(roman_string):
-        if roman_string[i : i + 2] in roman_numbers:
-            res += roman_numbers.get(roman_string[i : i + 2])
+        if roman_string[i: i + 2] in roman_numbers:
+            res += roman_numbers.get(roman_string[i: i + 2])
             i += 2
         elif roman_string[i] in roman_numbers:
             res += roman_numbers.get(roman_string[i])
