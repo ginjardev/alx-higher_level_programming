@@ -8,7 +8,9 @@ def safe_print_list_integers(my_list=[], x=0):
             if isinstance(my_list[i], int):
                 print("{:d}".format(my_list[i]), end="")
                 counter += 1
-        except ValueError:
-            continue
+            else:
+                continue
+        except IndexError:
+            pass
     print()
     return counter
