@@ -38,7 +38,7 @@ class Rectangle:
         """
         if self.__height == 0 or self.__width == 0:
             return ""
-        row = Rectangle.print_symbol * self.__width
+        row = str(Rectangle.print_symbol) * self.__width
         return "\n".join([row] * self.__height)
 
     def __repr__(self):
