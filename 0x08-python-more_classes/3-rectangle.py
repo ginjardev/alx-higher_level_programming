@@ -26,9 +26,13 @@ class Rectangle:
             self.__height = height
 
     def __str__(self):
-        """Returns string representation of rectangle object"""
+        """Outputs string representation of rectangle object
+
+        Returns:
+            str: returns string version of rectangle object with #
+        """
         if self.__height == 0 or self.__width == 0:
-            print("")
+            return ""
         row = '#' * self.__width
         return '\n'.join([row] * self.__height)
 
