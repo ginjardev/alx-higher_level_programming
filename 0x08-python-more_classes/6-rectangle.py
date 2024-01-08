@@ -45,8 +45,8 @@ class Rectangle:
 
     def __del__(self):
         if Rectangle.number_of_instances > 0:
-            Rectangle.number_of_instances += 1
-        return print("Bye rectangle...")
+            Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
 
     @property
     def width(self):
