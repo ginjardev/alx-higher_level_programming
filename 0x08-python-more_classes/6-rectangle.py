@@ -41,9 +41,11 @@ class Rectangle:
         return "\n".join([row] * self.__height)
 
     def __repr__(self):
+        """Outputs formal string representation of Rectangle object"""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
+        """Message on object deletion"""
         if Rectangle.number_of_instances > 0:
             Rectangle.number_of_instances -= 1
         print("Bye rectangle...")

@@ -37,10 +37,12 @@ class Rectangle:
         return "\n".join([row] * self.__height)
 
     def __repr__(self):
+        """Outputs formal string representation of Rectangle object"""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        return print("Bye rectangle...")
+        """Message on object deletion"""
+        print("Bye rectangle...")
 
     @property
     def width(self):
