@@ -29,10 +29,8 @@ class Rectangle:
         """Returns string representation of rectangle object"""
         if self.__height == 0 or self.__width == 0:
             print("")
-        else:
-            row = '#' * self.__width
+        row = '#' * self.__width
         return '\n'.join([row] * self.__height)
-    
 
     @property
     def width(self):
