@@ -10,11 +10,16 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """The __init__ constructor initializes an instance object
         Args:
-            width (int): width parameter
-            height (int): height parameter
+            width (int, optional): width parameter
+            height (int, optional): height parameter
         """
-        self.__width = width
-        self.__height = height
+        if type(width) != int or type(height) != int:
+            raise TypeError("width and height must be an integer")
+        elif width < 0 or height < 0:
+            raise ValueError("width and height must be >= 0")
+        else:
+            self.__width = width
+            self.__height = height
 
     @property
     def width(self):
@@ -23,6 +28,10 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
+        """sets new value for width
+        Args:
+            value (int): integer value
+        """
         if type(value) != int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -37,6 +46,10 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
+        """sets new value for height
+        Args:
+            value (int): integer value
+        """
         if type(value) != int:
             raise TypeError("height must be an integer")
         elif value < 0:
