@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """MyList Module - prints the list, but sorted (ascending sort)"""
 
 
