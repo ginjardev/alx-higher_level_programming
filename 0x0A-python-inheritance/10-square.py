@@ -15,3 +15,12 @@ class Square(Rectangle):
         self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
+
+    def area(self) -> int:
+        """
+        Returns the area of the square.
+
+        Returns:
+            The area of the square.
+        """
+        return self.__size**2
