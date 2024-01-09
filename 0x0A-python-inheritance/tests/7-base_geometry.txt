@@ -4,13 +4,13 @@
  How to use 7-base_goemetry.py
 ===============================
 
-This modual contain one class `BaseGeomtry`
+This module contains one class `BaseGeomtry`
 
 
 Usage
 =====
 
-Importing the class from the modual
+Importing the class from the module
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
