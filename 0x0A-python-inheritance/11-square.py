@@ -27,4 +27,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """Returns string output of square object"""
-        return f'[square] {self.__size}/{self.__size}'
+        return f'[Square] {self.__size}/{self.__size}'
