@@ -17,7 +17,7 @@ def save_list_to_file(filename="add_item.json"):
     try:
         my_list = load_from_json_file(filename)
     except Exception:
-        save_to_json_file(my_list, filename)
+        save_to_json_file([], filename)
 
     my_list.extend(sys.argv[1:])
     save_to_json_file(my_list, filename)
