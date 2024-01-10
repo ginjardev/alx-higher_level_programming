@@ -22,13 +22,29 @@ def save_list_to_file(filename="add_item.json"):
     # my_list.extend(sys.argv[1:])
     # save_to_json_file(my_list, filename)
 
-    try:
-        args = load_from_json_file(filename)
-    except FileNotFoundError:
-        args = []
+    # try:
+    #     args = load_from_json_file(filename)
+    # except FileNotFoundError:
+    #     args = []
 
-    args.extend(sys.argv[1:])
-    save_to_json_file(args, "add_item.json")
+    # args.extend(sys.argv[1:])
+    # save_to_json_file(args, "add_item.json")
+
+    my_list = []
+
+    # create the Python list from the JSON file, and handle errors as needed
+    try:
+        py_list = load_from_json_file(filename)
+    except Exception:
+        # let's create the file, it doesn't exist
+        save_to_json_file([], filename)
+
+    # add all the arguments to the lists
+    argv = sys.argv[1:]
+    for arg in argv:
+        py_list.append(arg)
+
+    save_to_json_file(py_list, filename)
 
 
 if __name__ == "__main__":
