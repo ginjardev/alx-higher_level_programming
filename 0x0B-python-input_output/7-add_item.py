@@ -13,14 +13,22 @@ def save_list_to_file(filename="add_item.json"):
     Args:
         filename (object): file object/path
     """
-    my_list = []
-    try:
-        my_list = load_from_json_file(filename)
-    except Exception:
-        save_to_json_file([], filename)
+    # my_list = []
+    # try:
+    #     my_list = load_from_json_file(filename)
+    # except Exception:
+    #     save_to_json_file([], filename)
 
-    my_list.extend(sys.argv[1:])
-    save_to_json_file(my_list, filename)
+    # my_list.extend(sys.argv[1:])
+    # save_to_json_file(my_list, filename)
+
+    try:
+        args = load_from_json_file(filename)
+    except FileNotFoundError:
+        args = []
+
+    args.extend(sys.argv[1:])
+    save_to_json_file(args, "add_item.json")
 
 
 if __name__ == "__main__":
