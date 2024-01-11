@@ -8,6 +8,4 @@ def copy_list(l):
     Args:
         l (list): list parameter
     """
-    copy = []
-    copy = l[:]
-    return copy
+    return l[:]
