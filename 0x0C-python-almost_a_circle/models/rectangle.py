@@ -109,12 +109,11 @@ class Rectangle(Base):
         """Function prints Rectangle to STDOUT"""
         for i in range(self.__height):
             for j in range(self.__width):
-                print("#", end='')
+                print("#", end="")
             print()
 
     def __str__(self):
-        """ Return a string represntation of the object Rectangle """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                        self.x, self.y,
-                                                        self.width,
-                                                        self.height)
+        """Return a string represntation of the object Rectangle"""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height
+        )
