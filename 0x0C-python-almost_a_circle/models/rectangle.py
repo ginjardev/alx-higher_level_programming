@@ -16,32 +16,56 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """returns width attribute"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """sets width attribute with value
+
+        Args:
+            value (int): integer parameter
+        """
         self.__width = value
 
     @property
     def height(self):
+        """Returns height attribute"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Sets height attribute with value
+        
+        Args:
+            value (int): int parameter
+        """
         self.__height = value
 
     @property
-    def get_x(self):
+    def x(self):
+        """Returns x atribute"""
         return self.__x
 
-    @get_x.setter
-    def get_x(self, value):
+    @x.setter
+    def x(self, value):
+        """Sets x attribute with value
+        
+        Args:
+            value (int): int parameter
+        """
         self.__x = value
 
     @property
-    def get_y(self):
+    def y(self):
+        """Returns y attribute"""
         return self.__y
 
-    @get_y.setter
-    def get_y(self, value):
+    @y.setter
+    def y(self, value):
+        """Sets y attribute with value
+
+        Args:
+            value (int): int parameter
+        """
         self.__y = value
