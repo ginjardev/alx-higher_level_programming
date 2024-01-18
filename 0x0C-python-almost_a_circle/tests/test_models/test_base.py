@@ -13,7 +13,6 @@ class TestBase(unittest.TestCase):
 
     def test_base(self):
         self.assertTrue(self.base)
-        print(self.base.id, 'two')
 
     def test_object_id(self):
         self.assertEqual(self.base.id, 2)

@@ -41,3 +41,6 @@ class TestRectangle(unittest.TestCase):
     def test_set_y(self):
         self.rectangle.y = 7
         self.assertEqual(self.rectangle.y, 7)
+    
+    def test_area(self):
+        self.assertEqual(self.rectangle.area(), 6)
