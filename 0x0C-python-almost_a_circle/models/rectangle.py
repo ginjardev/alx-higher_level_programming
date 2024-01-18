@@ -36,7 +36,6 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Sets height attribute with value
-        
         Args:
             value (int): int parameter
         """
@@ -50,7 +49,6 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Sets x attribute with value
-        
         Args:
             value (int): int parameter
         """
