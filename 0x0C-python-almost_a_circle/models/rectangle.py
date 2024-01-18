@@ -121,3 +121,16 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height
         )
+
+    def update(self, *args):
+        """update instance variables with *args"""
+        if args[0]:
+            self.id = args[0]
+        if len(args) > 1 and args[1]:
+            self.__width = args[1]
+        if len(args) > 2 and args[2]:
+            self.height = args[2]
+        if len(args) > 3 and args[3]:
+            self.__x = args[3]
+        if len(args) > 4 and args[4]:
+            self.__y = args[4]
