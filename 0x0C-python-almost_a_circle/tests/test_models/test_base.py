@@ -7,13 +7,13 @@ import unittest
 class TestBase(unittest.TestCase):
     def setUp(self):
         self.base = Base()
-    
+
     def tearDown(self):
         del self.base
 
     def test_base(self):
         self.assertTrue(self.base)
+        print(self.base.id, 'two')
 
     def test_object_id(self):
-        print(self.base.id)
-        self.assertEqual(self.base.id, 1)
+        self.assertEqual(self.base.id, 2)
