@@ -113,7 +113,9 @@ class Base:
 
                 csvReader = csv.DictReader(csvFile, fieldnames=fieldnames)
                 dict_list = [
-                    dict([k, int(v)] for k, v in row.items()) for row in csvReader
+                    dict(
+                        [k, int(v)] for k, v in row.items()
+                        ) for row in csvReader
                 ]
                 return [cls.create(**d) for d in dict_list]
 
