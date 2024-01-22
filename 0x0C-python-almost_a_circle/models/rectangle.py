@@ -122,15 +122,34 @@ class Rectangle(Base):
             self.id, self.x, self.y, self.width, self.height
         )
 
-    def update(self, *args):
-        """update instance variables with *args"""
-        if args[0]:
-            self.id = args[0]
-        if len(args) > 1 and args[1]:
-            self.__width = args[1]
-        if len(args) > 2 and args[2]:
-            self.height = args[2]
-        if len(args) > 3 and args[3]:
-            self.__x = args[3]
-        if len(args) > 4 and args[4]:
-            self.__y = args[4]
+    def update(self, *args, **kwargs):
+        """update instance variables with *args
+
+        Args:
+            args - variable length arguments
+            kwargs - keyword arguments
+        """
+        if args and len(args) > 0:
+            if len(args) >= 1 and args[0] is not None:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+
+        elif kwargs and len(kwargs) > 0:
+            for k, v in kwargs.items():
+                if k == "id" and v is not None:
+                    self.id = v
+                elif k == "width":
+                    self.width = v
+                elif k == "height":
+                    self.height = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
