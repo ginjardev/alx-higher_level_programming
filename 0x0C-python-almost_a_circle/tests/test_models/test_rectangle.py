@@ -10,6 +10,9 @@ class TestRectangle(unittest.TestCase):
 
     def setUp(self):
         self.rectangle = Rectangle(2, 3, 4, 5)
+    
+    def test_instance_of_Base(self):
+        self.assertIsInstance(self.rectangle, Base)
 
     def test_rectangle(self):
         self.assertTrue(self.rectangle)
@@ -46,4 +49,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.rectangle.area(), 6)
 
     def test_str(self):
-        self.assertEqual(self.rectangle.__str__(), "[Rectangle] (10) 4/5 - 2/3")
+        self.assertEqual(self.rectangle.__str__(), "[Rectangle] (11) 4/5 - 2/3")
+    
+    # def test_
