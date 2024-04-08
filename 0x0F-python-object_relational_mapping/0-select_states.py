@@ -9,7 +9,7 @@ def list_states(username, password, db_name):
         user=username,
         password=password,
         db=db_name
-        )
+    )
     cur = conn.cursor()
     cur.execute("SELECT * FROM states ORDER BY states.id ASC")
     states = cur.fetchall()
