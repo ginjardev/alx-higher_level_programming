@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 if __name__ == '__main__':
-    conn = MySQLdb.connect(
+    db = MySQLdb.connect(
         host="localhost",
         port=3306,
         user=sys.argv[1],
@@ -13,7 +13,7 @@ if __name__ == '__main__':
         db=sys.argv[3],
     )
 
-    cur = conn.cursor()
+    cur = db.cursor()
     cur.execute(
         "SELECT * FROM states \
         WHERE  states.name LIKE \
@@ -23,4 +23,4 @@ if __name__ == '__main__':
     for state in states:
         print(state)
     cur.close()
-    conn.close()
+    db.close()
