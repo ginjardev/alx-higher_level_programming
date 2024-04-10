@@ -21,4 +21,5 @@ if __name__ == '__main__':
         State)
     for city, state in state_cities.all():
         print(f"{state.name}: ({city.id}) {city.name}")
+    session.commit()
     session.close()
