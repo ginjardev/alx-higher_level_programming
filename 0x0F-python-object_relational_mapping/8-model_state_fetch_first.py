@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""script that lists all State objects from the database hbtn_0e_6_usa"""
+"""script that prints the first State
+object from the database hbtn_0e_6_usa"""
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from model_state import Base, State
@@ -19,3 +20,4 @@ if __name__ == "__main__":
         print(f"{state.id}: {state.name}")
     else:
         print("Nothing")
+    session.close()
